@@ -1,0 +1,38 @@
+package com.TechVerit.utilities;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Product_attributes_validations {
+	
+	
+	@Test
+	public void VerifyMaxCharLimit () {
+		
+		WebDriverManager.firefoxdriver().setup();
+
+		WebDriver driver = new FirefoxDriver();
+		
+		browser_launch browser_launch = new browser_launch ();
+		browser_launch.Setup();
+		
+		driver.findElement(By.linkText("Products")).click();
+		driver.findElement(By.linkText("New Product")).click();
+		String Title= driver.findElement(By.id("product_title")).getAttribute("maxlength");
+		Assert.assertEquals(Title, 40);
+		
+				}
+	}
+		
+	
+
+	

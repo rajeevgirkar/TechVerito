@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="org.testng.annotations.AfterTest"/>
+<fullyQualifiedTypeName name="com.TechVerit.utilities.Products"/>
+<fullyQualifiedTypeName name="com.TechVerit.utilities.browser_launch"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.Alert"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Sleeper"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Wait"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="org.testng.annotations.BeforeTest"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
+<fullyQualifiedTypeName name="io.github.bonigarcia.wdm.WebDriverManager"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+<fullyQualifiedTypeName name="org.testng.Assert"/>
+<fullyQualifiedTypeName name="java.time.Duration"/>
+<fullyQualifiedTypeName name="com.TechVerit.utilities.Products_Parameter"/>
+<fullyQualifiedTypeName name="com.TechVerit.utilities.Products_methods"/>
+</qualifiedTypeNameHistroy>

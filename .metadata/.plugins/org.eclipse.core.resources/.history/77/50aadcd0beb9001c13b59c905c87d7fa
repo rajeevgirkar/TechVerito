@@ -1,0 +1,73 @@
+package com.TechVerit.utilities;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Sleeper;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Products_methods extends browser_launch {
+	
+	 	
+      public By sku = By.id("product_sku") ;
+	  private By description = By.id("product_description") ;
+	  private By title = By.id("product_title") ;
+	  
+	   
+	    public String fillproductdetails (Products Products ) {
+	    	
+	    driver.findElement(title).clear();	
+	    driver.findElement(sku).clear();
+	    driver.findElement(description).clear();	    			
+		driver.findElement(title).sendKeys(Products.getTitle());
+		driver.findElement(sku).sendKeys(Products.getSku());
+		driver.findElement(description).sendKeys(Products.getDescription()); 
+		driver.findElement(By.id("product_submit_action") ).click();
+	    return driver.findElement(By.className("flashes") ).getText() ;
+	      				
+	}
+	    
+        public void CreateProduct( )  {
+        
+		driver.findElement(By.id("products")).click();
+		driver.findElement(By.linkText("New Product")).click();
+				
+    }
+        public void updateProduct( ) {
+        	
+        driver.findElement(By.id("products")).click();	
+        String id = driver.findElement(By.className("resource_id_link")).getText();
+        
+    	driver.findElement(By.partialLinkText(id)).click();
+        driver.findElement(By.linkText("Edit Product")).click();
+       
+    	
+    	       
+    }
+        public void deleteProduct( ) throws InterruptedException   {
+        	
+        driver.findElement(By.id("products")).click();	
+        	
+        String id1 = driver.findElement(By.className("resource_id_link")).getText();
+        driver.findElement(By.partialLinkText(id1)).click();
+        driver.findElement(By.linkText("Delete Product")).click();
+        driver.switchTo().alert().accept();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        Thread.sleep(10000);
+     // throws InterruptedException
+           
+               
+     
+     }
+        
+
+}

@@ -1,0 +1,34 @@
+package com.TechVerit.utilities;
+
+public class Products {
+	
+	public static String Title ;
+	public static String Sku ;
+	public static String Description ;
+	
+	public Products (String title, String sku, String description) {
+		
+		Title = title;
+		Sku = sku;
+		Description = description;
+	}
+	public static String getTitle() {
+		return Title;
+	}
+	public void setTitle(String title) {
+		Title = title;
+	}
+	public static String getSku() {
+		return Sku;
+	}
+	public void setSku(String sku) {
+		Sku = sku;
+	}
+	public static String getDescription() {
+		return Description;
+	}
+	public void setDescription(String description) {
+		Description = description;
+	}
+
+}

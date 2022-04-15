@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="62626" started-at="2022-04-10T07:50:27 IST" finished-at="2022-04-10T07:51:30 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="62626" started-at="2022-04-10T07:50:27 IST" finished-at="2022-04-10T07:51:30 IST">
+      <class name="TechVerit.com.tech.App">
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:TechVerit.com.tech.App@2a556333]" name="OpenBrowser" duration-ms="62564" started-at="2022-04-10T07:50:27 IST" finished-at="2022-04-10T07:51:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+      </class> <!-- TechVerit.com.tech.App -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

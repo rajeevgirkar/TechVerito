@@ -1,0 +1,27 @@
+package com.TechVerit.utilities;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Product_attributes_validations {
+	
+	public void VerifyMaxCharLimit () {
+		
+		
+		WebDriver driver ;
+		
+		browser_launch browser_launch = new browser_launch ();
+		browser_launch.Setup();
+		
+		
+	}
+		
+	}
+
+	

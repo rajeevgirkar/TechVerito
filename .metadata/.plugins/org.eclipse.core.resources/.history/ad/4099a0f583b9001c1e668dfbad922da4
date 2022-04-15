@@ -1,0 +1,72 @@
+package com.TechVerit.utilities;
+
+import static org.testng.Assert.assertEquals;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class browser_launch {
+
+		  
+	   public static WebDriver driver ;
+	   
+
+	  
+	
+	    @BeforeSuite
+		public void Setup () {
+		
+	        WebDriverManager.firefoxdriver().setup(); 
+	        
+	        driver = new FirefoxDriver();
+			
+			driver.get("https://rajeev-girikar.herokuapp.com/admin/");
+			driver.manage().window().maximize();
+			driver.findElement(By.id("admin_user_email")).sendKeys("admin@example.com");
+			driver.findElement(By.id("admin_user_password")).sendKeys("password");
+			driver.findElement(By.name("commit")).click();
+		    
+			
+	}
+	
+	    @Test
+	   
+		public void CreateProductTest ()  {
+		 
+	    Products Products = new Products ("esgerg", "rege", "sef") ;  
+	    Products_methods Products_methods = new Products_methods();
+	    Products_methods.CreateProduct(); 
+		Products_methods.fillproductdetails(Products);
+        String successmsg = Products_methods.fillproductdetails(Products );
+ 	 	Assert.assertEquals(successmsg, "Product was successfully created.");
+           	
+		}       
+	   
+	   @Test 
+	   public void updateProductTest(String id) {
+		   
+		   id = " 544 ";	
+	//	   Products_methods Products_methods = new Products_methods();
+	//	   Products_methods.updateProduct(id);
+		   driver.findElement(By.linkText("Products")).click();
+	       driver.findElement(By.partialLinkText(id)).click();
+	    	    	
+		   
+	   } 
+}
+
+
+	     	
+	
+

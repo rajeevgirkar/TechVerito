@@ -1,0 +1,31 @@
+package com.TechVerit.utilities;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+
+public class product_tests  {
+	
+
+	
+	WebDriver driver = new FirefoxDriver();
+		
+	
+	   
+		public void Setup () {
+		
+	      //  WebDriverManager.firefoxdriver().setup(); 
+	        
+	     	System.setProperty("webdriver.gecko.driver","D:\\WORKSPACE\\seleniumpractise\\drivers\\geckodriver.exe");
+			
+			driver.get("https://rajeev-girikar.herokuapp.com/admin/");
+			driver.manage().window().maximize();
+			driver.findElement(By.id("admin_user_email")).sendKeys("admin@example.com");
+			driver.findElement(By.id("admin_user_password")).sendKeys("password");
+			driver.findElement(By.name("commit")).click();
+			
+	}
+	
+}

@@ -1,0 +1,22 @@
+package com.TechVerit.utilities;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Base {
+	
+	
+	@Test 
+	public void login () {
+
+	System.setProperty("webdriver.gecko.driver","D:\\WORKSPACE\\seleniumpractise\\drivers\\geckodriver.exe");
+	WebDriver driver = new FirefoxDriver();
+	
+	driver.get("https://rajeev-girikar.herokuapp.com/admin/");
+	
+	driver.manage().window().maximize(); 
+	
+	}
+	
+}

@@ -1,0 +1,9 @@
+package com.TechVerit.utilities;
+
+public class Products {
+	
+	private String Title ;
+	private String Sku ;
+	private String Description ;
+
+}

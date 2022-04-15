@@ -1,0 +1,19 @@
+
+
+  1) Please extract this folder on Desktop & run directly . All dependencies required are in this folder .
+
+  2) I have used following tools & concepts of :
+
+     Core Java
+     Selenium Webdriver 
+     Maven 
+     TestNg 
+
+     & added dependencies accordingly.
+
+   3) I have written test cases for product creation , listing , update , delete , error scenarios & also validated attributes . 
+      All test cases are running fine . 
+
+   4) I have attached TechVerit_QA_Source Code .
+
+   4) Please let me know if you find any errors .
